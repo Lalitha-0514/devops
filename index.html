@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>taste of India</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;600;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Mukta', sans-serif;
+      background: #786178;
+      color: #04cbfd;
+      font-weight: 600;
+    }
+
+    .navbar { background: #4e342e; }
+    .navbar-brand, .nav-link { color: #fff !important; }
+
+    /* Animated Welcome Hero */
+    .hero {
+      background: url('https://images.pexels.com/photos/842571/pexels-photo-842571.jpeg') center/cover no-repeat;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: ""; position:absolute; inset:0;
+      background: rgba(0,0,0,0.3);
+    }
+    .hero-text {
+      position: relative; text-align: center;
+      z-index:1; animation: fadeDown 1s ease-out both;
+    }
+    .hero-text h1 {
+      color: #fff; font-size: 3rem; font-weight:800;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+      animation: zoomIn 1.2s ease-out both;
+    }
+    .hero-text p {
+      color: #04fd08; font-size: 1.2rem;
+      font-weight: 800px;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+      animation: pulse 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes fadeDown {
+      from { opacity:0; transform: translateY(-30px); }
+      to { opacity:1; transform: translateY(0); }
+    }
+    @keyframes zoomIn {
+      from { opacity:0; transform: scale(0.8); }
+      to { opacity:1; transform: scale(1); }
+    }
+    @keyframes pulse {
+      from { text-shadow: 2px 2px 6px rgba(255, 213, 79, 0.7); }
+      to { text-shadow: 4px 4px 12px rgba(255, 213, 79, 0.9); }
+    }
+
+    .section-title {
+      font-weight:700; color:#0000ff;
+      
+      margin:60px 0 30px;
+    }
+    .menu-item {
+      border:1px solid #ffe082; border-radius:10px;
+      padding:15px; background:#15010e; margin-bottom:30px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+      transition: transform .2s, box-shadow .2s;
+    }
+    .menu-item:hover {
+      transform: translateY(-5px);
+      box-shadow:0 8px 20px rgba(0,0,0,0.15);
+    }
+    .menu-item img {
+      width:100%; height:180px;
+      object-fit:cover; border-radius:5px;
+      margin-bottom:10px;
+    }
+    .menu-item p {
+        color: aqua;
+        font-weight: 400;
+        display: flex;
+    }
+    .menu-item h5 {
+      font-weight:600; color:#ff3c00;
+      display:flex; justify-content:space-between;
+    }
+    .about-items p {
+        color: aqua;
+    }
+    .contact p {
+        color: #0da5e1;
+    }
+
+    footer {
+      background:hsla(0, 98%, 16%, 0.736); color:#fff;
+      padding:20px; text-align:center;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#">Taste of india</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a href="#menu" class="nav-link">Menu</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Welcome to Taste of India</h1>
+      <p>Rooted in tradition, served with love</p>
+    </div>
+  </section>
+
+  <section id="menu" class="container">
+    <h2 class="section-title text-center">Our Menu</h2>
+
+    <h4 class="text-danger text-center">Starters</h4>
+    <div class="row">
+      <!-- existing items plus 2 more -->
+      <div class="col-md-4 menu-item">
+        <img src="https://images.pexels.com/photos/17390930/pexels-photo-17390930.jpeg" alt="Onion Bhaji">
+        <h5>Onion Bhaji <span>₹60</span></h5>
+        <p>Crispy fried onion fritters with spices.</p>
+      </div>
+      <div class="col-md-4 menu-item">
+        <img src="https://media.istockphoto.com/id/1279283117/photo/veg-pakora-in-gray-bowl-on-concrete-table-top-pakoda-is-indian-cuisine-appetizer-deep-fried.webp?a=1&b=1&s=612x612&w=0&k=20&c=9DKT1C5rTAvuF72DEN8xnOIwwDjP6rFYWpcje7ZRbFg=" alt="Veg Pakora">
+        <h5>Veg Pakora <span>₹60</span></h5>
+        <p>Mixed vegetable fritters in chickpea batter.</p>
+      </div>
+      <div class="col-md-4 menu-item">
+        <img src="https://media.istockphoto.com/id/1345733315/photo/close-up-image-of-fried-samosas-stuffed-with-spiced-potato-peas-and-meat-served-on-a.webp?a=1&b=1&s=612x612&w=0&k=20&c=s0DnSs9wrbCNqu3eIqRYB0bFgsd2mL6Mer6yklMsBPY=" alt="Samosa">
+        <h5>Samosa <span>₹30</span></h5>
+        <p>Deep-fried pastry filled with spicy potato.</p>
+      </div>
+      <div class="col-md-4 menu-item">
+        <img src="https://media.istockphoto.com/id/1267019739/photo/close-look-at-delicious-and-freshly-cooked-paneer-tikka-grilled-with-onions-and-bell-pepper.jpg?s=612x612&w=is&k=20&c=-uw7DxZ2wbxxPPPO31kin6XvwURxaOGD4ntbS0g-Lpo=" alt="Paneer Tikka">
+        <h5>Paneer Tikka <span>₹160</span></h5>
+        <p>Marinated grilled paneer with spices.</p>
+      </div>
+      <div class="col-md-4 menu-item">
+        <img src="https://theflavoursofkitchen.com/wp-content/uploads/2021/08/Chicken-65-3-scaled.jpg" alt="Chicken 65">
+        <h5>Chicken 65 <span>₹180</span></h5>
+        <p>South Indian fried chicken appetizer.</p>
+      </div>
+      <div class="col-md-4 menu-item">
+        <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/05/hara-bhara-kabab-recipe.jpg" alt="Hara Bhara Kabab">
+        <h5>Hara Bhara Kabab <span>₹120</span></h5>
+        <p>Spinach & pea patties with fresh herbs.</p>
+      </div>
+      <div class="col-md-4 menu-item">
+        <img src="https://www.thespruceeats.com/thmb/SvtF9xyLadccnSIb5ES4H7EOZPw=/2000x1500/filters:fill(auto,1)/Papdi-Chaat-5840a8eb5f9b5851e5d7c1ef.jpg" alt="Papdi Chaat">
+        <h5>Papdi Chaat <span>₹80</span></h5>
+        <p>Crispy wafers with yogurt, tamarind & chutneys.</p>
+      </div>
+      <div class="col-md-4 menu-item">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.pGdwZ1gWkQy6D6TwA7hOowHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Pani Puri">
+        <h5>Pani Puri <span>₹60</span></h5>
+        <p>Crispy hollow balls with flavored water.</p>
+      </div>
+    </div>
+
+    <h4 class="text-danger text-center">Main Course</h4>
+    <div class="row">
+      <!-- existing items plus 2 new main courses -->
+      <div class="col-md-4 menu-item">
+        <img src="https://th.bing.com/th/id/R.38042d9cbf39aa7325a0fcca757c92bc?rik=sqZvxzHtdFF%2fXQ&riu=http%3a%2f%2f1.bp.blogspot.com%2f-e5iPRF94f60%2fUQVJpJet0jI%2fAAAAAAAAAGA%2fHl9HwW1Y6jo%2fs1600%2fchole%2bbhaure.jpg&ehk=0NTseki2UGb1IaTTLEWHAs0glKpMSss8aKbIFhCsUAs%3d&risl=&pid=ImgRaw&r=0" alt="Chole Bhature">
+        <h5>Chole Bhature <span>₹170</span></h5>
+        <p>Spiced chickpeas with fried bread.</p>
+      </div>
+      <div class="col-md-4 menu-item">
+        <img src="https://www.whiskaffair.com/wp-content/uploads/2020/07/Chicken-Biryani-2-3.jpg" alt="Hyderabadi Biryani">
+        <h5>Hyderabadi Biryani <span>₹250</span></h5>
+        <p>Aromatic layered rice with spiced meat.</p>
+      </div>
+      <div class="col-md-4 menu-item">
+        <img src="https://gimmedelicious.com/wp-content/uploads/2020/01/30-Minute-Instant-Pot-Butter-Chicken-7.jpg" alt="Butter Chicken">
+        <h5>Butter Chicken <span>₹220</span></h5>
+        <p>Creamy tomato gravy with tender chicken.</p>
+      </div>
+      <div class="col-md-4 menu-item">
+        <img src="https://domesticdreamboat.com/wp-content/uploads/2023/09/Palak-Paneer-Closeup-cropped.jpg" alt="Palak Paneer">
+        <h5>Palak Paneer <span>₹180</span></h5>
+        <p>Spinach and cottage cheese curry.</p>
+      </div>
+      <div class="col-md-4 menu-item">
+        <img src="https://myfoodstory.com/wp-content/uploads/2018/08/Dal-Makhani-New-4.jpg?fit=1200,9999" alt="Dal Makhani">
+        <h5>Dal Makhani <span>₹150</span></h5>
+        <p>Slow-cooked black lentils with butter.</p>
+      </div>
+      <div class="col-md-4 menu-item">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.gU0vqIOi_8yENF3h4aiCzAAAAA?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Veg Korma">
+        <h5>Vegetable Korma <span>₹200</span></h5>
+        <p>Creamy mixed vegetable curry.</p>
+      </div>
+    </div>
+
+    <h4 class="text-danger text-center">Desserts</h4>
+    <div class="row mb-5">
+      <!-- existing desserts plus 2 new -->
+      <div class="col-md-4 menu-item">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.M2n3x_UAq6CGuvE0-0NwygHaE7?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Jalebi">
+        <h5>Jalebi <span>₹40</span></h5>
+        <p>Crispy spirals soaked in saffron syrup.</p>
+      </div>
+      <div class="col-md-4 menu-item">
+        <img src="https://resize.indiatvnews.com/en/centered/newbucket/1200_675/2024/03/befunky-collage-2024-03-17t105646-1710653211.jpg" alt="Ras Malai">
+        <h5>Ras Malai <span>₹70</span></h5>
+        <p>Saffron paneer patties in sweet milk.</p>
+      </div>
+      <div class="col-md-4 menu-item">
+        <img src="https://vismaifood.com/storage/app/uploads/public/605/43d/9e3/60543d9e36717269309829.jpg" alt="Kulfi">
+        <h5>Kulfi <span>₹60</span></h5>
+        <p>Traditional Indian ice cream.</p>
+      </div>
+      <div class="col-md-4 menu-item">
+        <img src="https://www.cubesnjuliennes.com/wp-content/uploads/2019/11/Gajar-Ka-Halwa-2.jpg" alt="Gajar Halwa">
+        <h5>Gajar Halwa <span>₹80</span></h5>
+        <p>Carrot pudding flavored with cardamom.</p>
+      </div>
+      <div class="col-md-4 menu-item">
+        <img src="https://th.bing.com/th/id/R.0099b46677738f6e2bccd270df670ac5?rik=uISkuPefdKDXtQ&riu=http%3a%2f%2fwhatscookingmom.in%2fwp-content%2fuploads%2f2013%2f05%2frasgullas.jpg&ehk=H1a0iFSxeMg7ogZjDIezUqd2JNE2Dbf%2fkE0R8vZPOyo%3d&risl=&pid=ImgRaw&r=0" alt="Rasgulla">
+        <h5>Rasgulla <span>₹60</span></h5>
+        <p>Spongy cottage cheese balls in syrup.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="container">
+    <h2 class="section-title text-center">About Us</h2>
+    <p class="text-center">
+        Taste of India brings you the authentic flavors of traditional Indian cuisine, served with warmth and elegance. Step in to experience a journey through spices, stories, and soulful hospitality.
+    </p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="container">
+    <h2 class="section-title text-center">Contact Us</h2>
+    <p class="text-center">📞 <strong>+91 90006 01279</strong></p>
+    <p class="text-center">📧 <strong>contact@tastefindia.com</strong></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Taste of India. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
